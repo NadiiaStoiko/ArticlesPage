@@ -25,8 +25,7 @@ export class ArticlePageComponent implements OnInit {
    this.descr = this.route.snapshot.params['itemSummary'];
   }
 
-  public routeToArticlesList():void {
+  public routeToArticlesList(): void {
     this.location.back();
   }
-
 }

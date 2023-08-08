@@ -40,9 +40,7 @@ export class ArticlesListComponent implements OnInit {
 
   private articalesFilter(value: string): void {
     const articlesListSum = this.articlesList.filter((articale:any)=>articale.summary.toLocaleLowerCase().includes(value.toLocaleLowerCase()));
-    console.log('articlesListSum', articlesListSum);
     const articlesListTitle = this.articlesList.filter((articale:any)=>articale.title.toLocaleLowerCase().includes(value.toLocaleLowerCase()));
-    console.log('articlesListTitle', articlesListTitle);
     let temp = articlesListTitle.concat(articlesListSum);
     this.articlesList = [...new Set(temp)];
   }
