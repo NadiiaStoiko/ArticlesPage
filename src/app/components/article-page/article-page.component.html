@@ -1,0 +1,17 @@
+<mat-card class="article-page">
+  <img mat-card-image [src] ="picture" class="article-item-img" alt="article-img"/>
+  <div class="wrapper">
+    <div class="title-wrapper">
+      <mat-card-title class="article-title">{{ title }}</mat-card-title>
+    </div>
+      <mat-card-content>
+        <p class="article-descr">
+          {{ descr }}
+        </p>
+      </mat-card-content>
+  </div>
+    <div class="back-btn" (click)="routeToArticlesList()">
+      <img [src]="arrowIcon" class="arrow-icon" alt="arrow-icon" />
+      <span>Back to homepage</span>
+    </div>
+</mat-card>

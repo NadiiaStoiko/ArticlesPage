@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;}
+body {
+  margin: 0;
+  font-family: Montserrat;
+ }
+
+ :root {
+  --fw:600;
+  --fwnormal:400;
+  --dark-grey: #363636;
+  --light-grey: #EAEAEA;
+ }

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="search-section">
+    <p class="search-title">Filter by keywords</p>
+    <form name="searchForm" class="search-field">
+      <img [src]="searchIcon" class="search-icon" alt="search-articles" (click)="searchHandler(search.value)" />
+      <input
+        class="search"
+        type="text"
+        #search
+        placeholder="Search..."
+        (keydown)="inputHandler($event)"
+      />
+    </form>
+    <!-- (input)="onInput($event)" -->
+  </div>
+  <div class="result-section">
+    Results:
+    <span class="articles-count">{{articlesList?.length}}</span>
+  </div>
+  <div class="articles-list" *ngIf="!isLoading">
+    <div class="articles-list-item" *ngFor="let articleItem of articlesList">
+      <app-article-item [inputValue]="inputValue" [articleItem]="articleItem"></app-article-item>
+    </div>
+  </div>
+  <div class="loading-section" *ngIf="isLoading">
+    ...Loading
+  </div>
+</div>

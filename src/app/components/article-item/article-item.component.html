@@ -1,0 +1,23 @@
+<mat-card class="article-card">
+  <img mat-card-image [src] ="articleItem.image_url" class="article-item-img" alt="article-img">
+      <div class="wrapper">
+        <mat-card-subtitle class="article-date">
+          <img class="calendar-icon" [src]="calendarIcon" alt="calendar-icon">
+          {{ articleItem.published_at | date:'longDate' }}
+        </mat-card-subtitle>
+        <mat-card-title class="article-title" >
+          <div [innerHTML]="articleItem.title | highlightText: inputValue"></div>
+        </mat-card-title>
+      </div>
+    <mat-card-content>
+      <p class="article-descr"  [innerHTML]="articleItem.summary | maxTextLength | highlightText: inputValue">
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="read-more-btn" (click)="routeToArticle()">Read more
+        <img [src]="arrowIcon" class="arrow-icon" alt="arrow-icon" />
+      </div>
+    </mat-card-actions>
+</mat-card>
+
+<!-- {{ articleItem.title | highlightText: inputValue }} -->
