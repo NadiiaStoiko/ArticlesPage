@@ -20,6 +20,7 @@
 }
 
 .article-page {
+  width: 1440px;
   display: flex;
   flex-direction: column;
   width: 100%;
